@@ -8,6 +8,7 @@ import Companies from './pages/Companies';
 import Users from './pages/Users';
 import Payments from './pages/Payments';
 import Login from './pages/Login';
+import CompanyById from './pages/CompanyById';
 
 
 
@@ -21,11 +22,16 @@ function AppContext(){
         duration={3000}
         // expand={true} 
       />
+      
 
       <Routes>
         <Route path='/' element={<Layout/>} >
           <Route path='dashboard' element={<Dashboard/>}/>
+
           <Route path='companies' element={<Companies/>}/>
+          <Route path='companies/:companyId' element={<CompanyById/>}/>
+
+
           <Route path='users' element={<Users/>}/>
           <Route path='payments' element={<Payments/>}/>
         </Route>

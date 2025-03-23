@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { LoginCredential } from "../types/AuthTypes";
+import { LoginCredential } from '../types/authTypes';
+;
 
 
 export const login = async (credential:LoginCredential)=>{
