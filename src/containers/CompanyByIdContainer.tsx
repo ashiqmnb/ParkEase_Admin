@@ -5,6 +5,7 @@ import { blockUblockCompany, getCompanyById } from "../api/company";
 import ProfileDetails from "../components/companyById/ProfileDetails";
 import MapAndImages from "../components/companyById/MapAndImages";
 import { toast } from "sonner";
+import { getSlotCount } from "../api/slots";
 
 const CompanyByIdContainer = () => {
 
@@ -16,6 +17,11 @@ const CompanyByIdContainer = () => {
       enabled: !!companyId,
    });
 
+   const {data: slotsCount} = useQuery({
+      queryKey:['slotsCount'],
+      queryFn: ()=> companyId ? getSlotCount(companyId) : Promise.reject("No company ID"),
+      enabled: !!companyId,
+   })
 
    const blockUnlockCompanyMutation = useMutation({
       mutationFn: blockUblockCompany,
@@ -52,6 +58,8 @@ const CompanyByIdContainer = () => {
             type={data?.type}
             handleBlock={handleBlockUnblock}
             isPending={blockUnlockCompanyMutation.isPending}
+            twoWheeler={slotsCount?.twoWheeler}
+            fourWheeler={slotsCount?.fourWheeler}
          />
 
          <MapAndImages

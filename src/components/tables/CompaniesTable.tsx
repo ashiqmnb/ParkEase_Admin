@@ -53,34 +53,34 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({ companies, page, handle
             <Table>
                <TableHead>
                   <TableRow
-                  sx={{
-                     height: "40px",
-                     backgroundColor: "#2DC98A",
-                  }}
+                     sx={{
+                        height: "40px",
+                        backgroundColor: "#2DC98A",
+                     }}
                   >
-                  <TableCell sx={{...tableHeadStyle, paddingLeft:'20px'}}>Sl No</TableCell>
-                  <TableCell sx={tableHeadStyle}>Name</TableCell>
-                  <TableCell sx={tableHeadStyle}>Email</TableCell>
-                  <TableCell sx={tableHeadStyle}>Type</TableCell>
-                  <TableCell sx={tableHeadStyle}>Status</TableCell>
-                  <TableCell sx={tableHeadStyle}>Added Date</TableCell>
-                  <Tooltip 
-                     title="Block or Unblock" 
-                     placement="top-start"
-                     PopperProps={{
-                        modifiers: [
-                          {
-                            name: "offset",
-                            options: {
-                              offset: [10, -20],
-                            },
-                          },
-                        ],
-                      }}
-                  >
-                     <TableCell sx={tableHeadStyle}>B/U</TableCell>
-                  </Tooltip>
-                  
+                     <TableCell sx={{...tableHeadStyle, paddingLeft:'20px'}}>Sl No</TableCell>
+                     <TableCell sx={tableHeadStyle}>Name</TableCell>
+                     <TableCell sx={tableHeadStyle}>Email</TableCell>
+                     <TableCell sx={tableHeadStyle}>Type</TableCell>
+                     <TableCell sx={tableHeadStyle}>Status</TableCell>
+                     <TableCell sx={tableHeadStyle}>Added Date</TableCell>
+                     <Tooltip 
+                        title="Block or Unblock" 
+                        placement="top-start"
+                        PopperProps={{
+                           modifiers: [
+                           {
+                              name: "offset",
+                              options: {
+                                 offset: [10, -20],
+                              },
+                           },
+                           ],
+                        }}
+                     >
+                        <TableCell sx={tableHeadStyle}>B/U</TableCell>
+                     </Tooltip>
+                     
                   </TableRow>
                </TableHead>
                <TableBody>

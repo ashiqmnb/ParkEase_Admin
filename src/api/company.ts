@@ -1,6 +1,7 @@
 import axios from "axios";
 import { CompanyFormValues, FetchCompaniesParams } from "../types/companyTypes";
 
+
 export const fetchCompanies = async (params: FetchCompaniesParams) => {
    try {
       const res = await axios.get("https://localhost:7277/api/Company/admin", {

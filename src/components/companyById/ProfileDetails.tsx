@@ -19,13 +19,15 @@ interface ProfileDetailsProps{
    startDate: string,
    endDate: string,
    handleBlock: ()=>void,
-   isPending: boolean
+   isPending: boolean,
+   twoWheeler: number,
+   fourWheeler: number,
 }
 
 const ProfileDetails : React.FC<ProfileDetailsProps> = ({
    name, coins, description, district, email, isBlocked,
    phone, place, postalCode, profile, state, subscriptionStatus,
-   type, startDate, endDate, handleBlock, isPending
+   type, startDate, endDate, handleBlock, isPending, twoWheeler, fourWheeler
 }) => {
 
 
@@ -54,7 +56,7 @@ const ProfileDetails : React.FC<ProfileDetailsProps> = ({
                   Listed Slots
                </Typography>
                <Typography sx={{ fontSize:'14px',  fontWeight:'600',}}>
-                  12 (2W)  24(4W)
+                  {twoWheeler} (2W)  {fourWheeler} (4W)
                </Typography>
             </Box>
          </Box>
@@ -115,7 +117,7 @@ const ProfileDetails : React.FC<ProfileDetailsProps> = ({
                         </Typography>
                         :
                         <Typography sx={{color:'gray'}}>
-                           No address added
+                           No Description added
                         </Typography>
                      }
                   </Box>

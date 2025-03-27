@@ -1,9 +1,8 @@
+import UsersContainer from "../containers/UsersContainer"
 
 const Users = () => {
   return (
-    <div>
-      Users
-    </div>
+    <UsersContainer/>
   )
 }
 
