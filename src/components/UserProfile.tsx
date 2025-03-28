@@ -21,7 +21,7 @@ const UserProfile: React.FC<UserProfileProps> = ({
    phone,
    isBlocked,
    isPending,
-   handleBlockUnblock
+   handleBlockUnblock   
 }) => {
    return (
       <Box

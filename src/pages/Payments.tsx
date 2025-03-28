@@ -1,9 +1,8 @@
+import PaymentContainer from "../containers/PaymentContainer"
 
 const Payments = () => {
   return (
-    <div>
-      Payments
-    </div>
+    <PaymentContainer/>
   )
 }
 
