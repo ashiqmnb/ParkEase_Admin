@@ -9,6 +9,7 @@ import Users from './pages/Users';
 import Payments from './pages/Payments';
 import Login from './pages/Login';
 import CompanyById from './pages/CompanyById';
+import UserById from './pages/UserById';
 
 
 
@@ -33,6 +34,8 @@ function AppContext(){
 
 
           <Route path='users' element={<Users/>}/>
+          <Route path='users/:userId' element={<UserById/>}/>
+
           <Route path='payments' element={<Payments/>}/>
         </Route>
 

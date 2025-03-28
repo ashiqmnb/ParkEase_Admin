@@ -27,8 +27,6 @@ const UsersContainer = () => {
       queryFn:()=>fetchUsers(params),
    })
 
-   console.log("users", data)
-
    useEffect(()=>{
       refetch();
    },[params])

@@ -70,9 +70,9 @@ const UsersTable: React.FC<UsersTableProps> = ({handlePageChange, page, pageSize
                   </TableRow>
                </TableHead>
                <TableBody>
-                  {users?.map((company, index) => (
+                  {users?.map((user, index) => (
                      <TableRow
-                        // onClick={() => navigate(`/companies/${company.id}`)}
+                        onClick={() => navigate(`/users/${user.id}`)}
                         key={index}
                         sx={{
                            height: "40px",
@@ -82,14 +82,14 @@ const UsersTable: React.FC<UsersTableProps> = ({handlePageChange, page, pageSize
                         <TableCell sx={{ ...tableContentStyle, paddingLeft: "20px" }}>
                            {index + starting}
                         </TableCell>
-                        <TableCell sx={tableContentStyle}>{company.name}</TableCell>
-                        <TableCell sx={tableContentStyle}>{company.email}</TableCell>
-                        <TableCell sx={tableContentStyle}>{company.coins}</TableCell>
+                        <TableCell sx={tableContentStyle}>{user.name}</TableCell>
+                        <TableCell sx={tableContentStyle}>{user.email}</TableCell>
+                        <TableCell sx={tableContentStyle}>{user.coins}</TableCell>
                         <TableCell sx={tableContentStyle}>
-                           {new Date(company.addedDate).toLocaleDateString("en-GB")}
+                           {new Date(user.addedDate).toLocaleDateString("en-GB")}
                         </TableCell>
                         <TableCell sx={tableContentStyle}>
-                           {company.isBlocked ? (
+                           {user.isBlocked ? (
                               <CancelIcon sx={{ color: "red" }} />
                            ) : (
                               <CheckCircleIcon sx={{ color: "green" }} />
