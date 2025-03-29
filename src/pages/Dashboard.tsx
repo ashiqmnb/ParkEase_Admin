@@ -1,8 +1,7 @@
-import HomeContainer from "../containers/HomeContainer"
-
+import DashboardContainer from "../containers/DashboardContainer"
 
 const Home = () => {
-  return <HomeContainer/>
+  return <DashboardContainer/>
 }
 export default Home
 

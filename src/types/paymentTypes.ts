@@ -6,3 +6,13 @@ export interface Payment {
    transactionId: string;
    date: string;
 }
+
+export interface Transaction{
+   coin: number;
+   date: string;
+   description: string;
+   receiverId: string;
+   senderId: string;
+   status: string;
+   transactionId: string;
+}
